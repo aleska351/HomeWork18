@@ -11,7 +11,7 @@ public interface GitHubService {
 
 
     @GET("users/{username}")
-    Call<UserProfile> userInfo(@Path("username") String user);
+    Call<Repo> userInfo(@Path("username") String user);
 
 
     class Repo {
@@ -19,7 +19,4 @@ public interface GitHubService {
         public String name;
     }
 
-    class UserProfile {
-        public String login;
-    }
 }

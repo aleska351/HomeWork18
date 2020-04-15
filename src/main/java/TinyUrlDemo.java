@@ -20,9 +20,9 @@ public class TinyUrlDemo {
             Response<TinyUrlResponse> response;
             response = service.random("json", "http://kino-live2.org/").execute();
             if (response.isSuccessful()) {
-                System.out.println("State " + response.body().state);
-                System.out.println("LongUrl " + response.body().longUrl);
-                System.out.println("ShortUrl " + response.body().shortUrl);
+                System.out.println("State " + response.body().getState());
+                System.out.println("LongUrl " + response.body().getLongUrl());
+                System.out.println("ShortUrl " + response.body().getShortUrl());
             } else {
                 try (ResponseBody errorBody = response.errorBody()) {
                     String errorContent = errorBody.string();

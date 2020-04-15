@@ -15,7 +15,7 @@ public class GitHubDemo {
 
         try {
             Response<List<GitHubService.Repo>> response =
-                    service.listRepositories("NordicSemiconductor").execute();
+                    service.listRepositories("octocat").execute();
             if (response.isSuccessful()) {
                 for (GitHubService.Repo repo : response.body()) {
                     System.out.println("Repo id " + repo.id);
@@ -28,7 +28,7 @@ public class GitHubDemo {
                 }
             }
         } catch (IOException e) {
-            e.printStackTrace();
+            e.getMessage();
         }
     }
 }

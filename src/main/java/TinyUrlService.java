@@ -11,9 +11,11 @@ public interface TinyUrlService {
     Call<TinyUrlResponse> random(@Field("format") String format, @Field("url") String url);
 }
     class TinyUrlResponse {
-    public String state;
+    private String state;
     @SerializedName("longurl")
-    public String longUrl;
+    private String longUrl;
+    @SerializedName("shorturl")
+    private String shortUrl;
 
     public String getState() {
         return state;
@@ -26,7 +28,4 @@ public interface TinyUrlService {
     public String getShortUrl() {
         return shortUrl;
     }
-
-    @SerializedName("shorturl")
-    public String shortUrl;
 }

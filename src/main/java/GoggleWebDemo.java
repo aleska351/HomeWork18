@@ -5,7 +5,7 @@ import retrofit2.converter.scalars.ScalarsConverterFactory;
 
 import java.io.IOException;
 
-public class RetrofitDemo {
+public class GoggleWebDemo {
     public static void main(String[] args) {
         GoggleWebService service = new Retrofit.Builder().baseUrl("https://www.google.com/")
                 .addConverterFactory(ScalarsConverterFactory.create())
